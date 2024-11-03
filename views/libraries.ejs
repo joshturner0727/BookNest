@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+    <title>BookNest - Libraries</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <h1>Local Libraries</h1>
+        <ul>
+            <% libraries.forEach(function(library) { %>
+                <li>
+                    <strong><%= library.Name %></strong> - <%= library.Address %>
+                </li>
+            <% }); %>
+        </ul>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

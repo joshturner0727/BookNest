@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+    <title>BookNest - Return a Book</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <h1>Return a Book</h1>
+        <% if (message) { %>
+            <p><%= message %></p>
+        <% } %>
+        <form action="/return" method="POST">
+            <label for="username">Enter your username to return your reserved book:</label>
+            <input type="text" name="username" id="username" required>
+            <button type="submit">Return Book</button>
+        </form>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

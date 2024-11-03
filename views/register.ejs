@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+    <title>Register</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <h1>Register</h1>
+        <% if (message) { %>
+            <p><%= message %></p>
+        <% } %>
+        <form action="/register" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" required>
+
+            
+            <p class="password-requirements">
+                Password must be at least 8 characters long, and include:
+                <ul>
+                    <li>One uppercase letter</li>
+                    <li>One lowercase letter</li>
+                    <li>One number</li>
+                    <li>One special character (e.g., !@#$%^&*)</li>
+                </ul>
+            </p>
+
+            <label for="isLibrarian">Register as Librarian:</label>
+            <input type="checkbox" name="isLibrarian" id="isLibrarian" value="1">
+
+            <button type="submit">Register</button>
+        </form>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head') %>
+    <title>Book Search Results</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <h1>Search Results</h1>
+        <% if (message) { %>
+            <p><%= message %></p>
+        <% } else { %>
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Library</th>
+                </tr>
+                <% books.forEach(book => { %>
+                    <tr>
+                        <td><%= book.Title %></td>
+                        <td><%= book.Author %></td>
+                        <td><%= book.LibraryName %></td>
+                    </tr>
+                <% }) %>
+            </table>
+        <% } %>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

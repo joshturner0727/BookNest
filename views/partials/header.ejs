@@ -1,0 +1,28 @@
+<header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/catalog">Catalog</a></li>
+            <li><a href="/libraries">Libraries</a></li>
+            <li><a href="/return">Return a Book</a></li>
+            <% if (!user) { %>
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+            <% } else { %>
+                <li><a href="/logout">Logout</a></li>
+                <% if (user.isLibrarian) { %>
+                    <li><a href="/librarian/dashboard">Librarian Dashboard</a></li>
+                <% } %>
+                <!-- Link for updating password -->
+                <li><a href="/update-password">Update Password</a></li>
+            <% } %>
+            <!-- Search form -->
+            <li>
+                <form action="/search" method="GET" style="display:inline;">
+                    <input type="text" name="query" placeholder="Search for a book" required>
+                    <button type="submit">Search</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
