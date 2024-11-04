@@ -62,10 +62,6 @@ Librarians have special permissions to add, update, and delete books in the cata
 - **Node.js**: For backend development and server setup
 - **SQLite**: For relational database management
 
-## Development Process Used
-
-- **Agile Methodology**: Emphasizing iterative development, regular testing, and continuous feedback to adapt and improve features.
-
 ## Notes
 
 - Ensure all dependencies are installed using `npm install` before running the application.
